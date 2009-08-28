@@ -43,7 +43,8 @@ for line in src.split('\n'):
 	if line:
 		translations = line.split(';')
 		for origin in translations[posfrom].split(','):
-			result.append((origin, translations[posto]))
+			if origin and origin != '...':
+				result.append((origin, translations[posto]))
 
 result.sort()
 
@@ -90,6 +91,24 @@ try:
 				f.write('\t\t\t\t\t<dd>'+translation+'</dd>\n')
 		f.write('\n\t\t\t</dl>\n\t</body>\n</html>')
 	elif destformat == 'latex':
-		pass
+		f.write('\\documentclass[12pt,twocolumn]{article}\n\\title{'+LANGNAMES[langfrom]+
+				'--'+LANGNAMES[langto]+'}\\begin{document}\\maketitle\n\\tableofcontents\n\\newpage\n')
+		def startletter(letter):
+			f.write('\\section{'+letter.upper()+'}\n')
+		lastletter = ''
+		for line in result:
+			translations = line[1].split(',')
+			if len(translations) == 0: continue
+			if line[0][0] != lastletter:
+				lastletter = line[0][0]
+				startletter(lastletter)
+			f.write('{\\bf '+line[0]+'}\n')
+			if len(translations) > 1:
+				for num, translation in enumerate(translations):
+					f.write(' '+str(num+1)+' '+translation+'\n')
+			else:
+				f.write(' '+translations[0]+'\n')
+			f.write('\n')
+		f.write('\\end{document}')
 finally:
 	f.close()
