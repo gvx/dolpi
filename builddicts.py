@@ -2,9 +2,10 @@ import sys
 import string
 
 LANGS     = ('en-dp', 'nl-dp', 'no-dp', 'dp-en', 'dp-nl', 'dp-no')
-FORMATS   = ('txt', 'html', 'latex')
+FORMATS   = ('txt', 'html', 'latex', 'lout')
 LANGPOS   = {'dp': 0, 'nl': 1, 'en': 2, 'no': 3}
 LANGNAMES = {'dp': 'Dol Pi', 'nl': 'Nederlands', 'en': 'English', 'no': 'Norsk'}
+EXT       = {'latex': 'tex', 'lout': 'lt'}
 
 if len(sys.argv) == 2 and sys.argv[1] == '--help':
 	print('usage: python builddicts.py LANG FORMAT')
@@ -56,7 +57,7 @@ while i < len(result)-1:
 	else:
 		i += 1
 
-f = open('dict-'+sys.argv[1]+'.'+destformat, 'w')
+f = open('dict-'+sys.argv[1]+'.'+EXT.get(destformat, destformat), 'w')
 try:
 	if destformat == 'txt':
 		f.write(LANGNAMES[langfrom].upper() + '-' + LANGNAMES[langto].upper() + '\n\n')
@@ -90,6 +91,32 @@ try:
 			for translation in translations:
 				f.write('\t\t\t\t\t<dd>'+translation+'</dd>\n')
 		f.write('\n\t\t\t</dl>\n\t</body>\n</html>')
+	elif destformat == 'lout':
+		f.write('@Include { bookdict }\n@Book\n    @Title { '+LANGNAMES[langfrom]+
+				'--'+LANGNAMES[langto]+' }\n    @ColumnNumber { 2 }\n//\n@Begin\n')
+		def startletter(letter):
+			f.write('@Chapter\n    @Title { '+letter.upper()+' }\n@Begin\n')
+		def endletter(letter):
+			f.write('@End @Chapter\n')
+		def escape(text):
+			return text.replace('~', '"~"').replace('/', '"/"')
+		lastletter = ''
+		for line in result:
+			translations = line[1].split(',')
+			if len(translations) == 0: continue
+			if line[0][0] != lastletter:
+				if lastletter:
+					endletter(lastletter)
+				lastletter = line[0][0]
+				startletter(lastletter)
+			f.write('@LP\n @B {'+escape(line[0])+'} |0.1i\n')
+			if len(translations) > 1:
+				for num, translation in enumerate(translations):
+					f.write(str(num+1)+' '+escape(translation)+'\n')
+			else:
+				f.write(escape(translations[0])+'\n')
+		endletter(lastletter)
+		f.write('@End @Book\n')
 	elif destformat == 'latex':
 		f.write('\\documentclass[12pt,twocolumn]{article}\n\\title{'+LANGNAMES[langfrom]+
 				'--'+LANGNAMES[langto]+'}\\begin{document}\\maketitle\n\\tableofcontents\n\\newpage\n')
