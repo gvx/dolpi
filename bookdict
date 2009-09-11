@@ -37,7 +37,7 @@
 ###############################################################################
  
 @Use { @BasicSetup
-  # @InitialFont	{ Times Base 12p	} # initial font
+    @InitialFont	{ Times Base 10p	} # initial font
   # @InitialBreak	{{adjust 1.2fx hyphen} @OrIfPlain {ragged 1fx nohyphen}}
   # @InitialOutdent	{ 2f @OrIfPlain 4s	} # initial outdent
   # @InitialSpace	{ lout			} # initial space style
@@ -79,7 +79,7 @@
 ###############################################################################
 
 @Use { @DocumentSetup
-  # @PageType		{ A4	@OrIfPlain Other} # page type (width, height)
+    @PageType		{ A5	@OrIfPlain Other} # page type (width, height)
   # @PageWidth		{ 80s			} # page width if type Other
   # @PageHeight		{ 66f			} # page height if type Other
   # @PageOrientation	{ Portrait		} # Portrait, Landscape, etc.
@@ -142,9 +142,9 @@
     @ContentsPartGapAbove { 0.90v @OrIfPlain 1f	} # extra gap above `part' entry
   # @ContentsPartGapBelow { 0.00v @OrIfPlain 0f	} # extra gap below `part' entry
   # @ContentsFormat	{ number @DotSep title	} # contents entry format
-  # @ContentsLeader	{ ..			} # leader symbol in contents
-  # @ContentsLeaderGap	{ 4s	@OrIfPlain 2s	} # gap between leaders
-  # @ContentsRightWidth	{ 3f	@OrIfPlain 6s	} # page numbers column width
+    @ContentsLeader	{ .			} # leader symbol in contents
+    @ContentsLeaderGap	{ 0s	@OrIfPlain 0s	} # gap between leaders
+    @ContentsRightWidth	{ 1f	@OrIfPlain 0s	} # page numbers column width
 
     @MakeReferences	{ No			} # make references? Yes or No
   # @RefCiteStyle	{ [cite]		} # citation style

@@ -1,3 +1,4 @@
+#encoding: utf-8
 import sys
 import string
 
@@ -6,6 +7,8 @@ FORMATS   = ('txt', 'html', 'latex', 'lout')
 LANGPOS   = {'dp': 0, 'nl': 1, 'en': 2, 'no': 3}
 LANGNAMES = {'dp': 'Dol Pi', 'nl': 'Nederlands', 'en': 'English', 'no': 'Norsk'}
 EXT       = {'latex': 'tex', 'lout': 'lt'}
+USELANGS  = {'en-dp': 'English', 'nl-dp': 'Dutch', 'no-dp': 'Norwegian',
+				'dp-en': 'English', 'dp-nl': 'Dutch', 'dp-no': 'Norwegian'}
 
 if len(sys.argv) == 2 and sys.argv[1] == '--help':
 	print('usage: python builddicts.py LANG FORMAT')
@@ -29,13 +32,14 @@ if sys.argv[2] not in FORMATS:
 
 langfrom = sys.argv[1][:2]
 langto = sys.argv[1][-2:]
+uselang = USELANGS[sys.argv[1]]
 posfrom = LANGPOS[langfrom]
 posto = LANGPOS[langto]
 
 destformat = sys.argv[2]
 
 f = open('src.ecsv')
-src = f.read()
+src = f.read().decode('utf-8')
 f.close()
 
 result = []
@@ -57,7 +61,11 @@ while i < len(result)-1:
 	else:
 		i += 1
 
-f = open('dict-'+sys.argv[1]+'.'+EXT.get(destformat, destformat), 'w')
+class utf8file(file):
+	def write(self, text):
+		file.write(self, text.encode('utf-8'))
+
+f = utf8file('dict-'+sys.argv[1]+'.'+EXT.get(destformat, destformat), 'w')
 try:
 	if destformat == 'txt':
 		f.write(LANGNAMES[langfrom].upper() + '-' + LANGNAMES[langto].upper() + '\n\n')
@@ -93,13 +101,24 @@ try:
 		f.write('\n\t\t\t</dl>\n\t</body>\n</html>')
 	elif destformat == 'lout':
 		f.write('@Include { bookdict }\n@Book\n    @Title { '+LANGNAMES[langfrom]+
-				'--'+LANGNAMES[langto]+' }\n    @ColumnNumber { 2 }\n//\n@Begin\n')
+				'--'+LANGNAMES[langto]+' }\n    @Edition { @Date }\n    @ColumnNumber { 2 }\n    @InitialLanguage { '+uselang+' }\n//\n@Begin\n')
 		def startletter(letter):
-			f.write('@Chapter\n    @Title { '+letter.upper()+' }\n@Begin\n')
+			f.write('@Chapter\n    @Title { '+escape(letter.upper())+' }\n@Begin\n')
 		def endletter(letter):
 			f.write('@End @Chapter\n')
+		reps = (('~', '"~"'),
+				('/', '"/"'),
+				(u'é', '{@Char eacute}'),
+				(u'É', '{@Char Eacute}'),
+				(u'ø', '{@Char oslash}'),
+				(u'Ø', '{@Char Oslash}'),
+				(u'å', '{@Char aring}'),
+				(u'Å', '{@Char Aring}'),
+			)
 		def escape(text):
-			return text.replace('~', '"~"').replace('/', '"/"')
+			for ftext,rtext in reps:
+				text = text.replace(ftext,rtext)
+			return text
 		lastletter = ''
 		for line in result:
 			translations = line[1].split(',')
@@ -109,7 +128,7 @@ try:
 					endletter(lastletter)
 				lastletter = line[0][0]
 				startletter(lastletter)
-			f.write('@LP\n @B {'+escape(line[0])+'} |0.1i\n')
+			f.write('@LP\n @B {'+escape(line[0])+'}   \n')#'} |0.1i\n')
 			if len(translations) > 1:
 				for num, translation in enumerate(translations):
 					f.write(str(num+1)+' '+escape(translation)+'\n')
