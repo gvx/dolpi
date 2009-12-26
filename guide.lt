@@ -1,0 +1,66 @@
+@Include { bookdict }
+@Book
+    @Title { Dol Pi Grammatical guide }
+    @Author { Robin Wellner }
+    @Edition { @Date }
+    @InitialLanguage { English }
+//
+@Begin
+@Chapter
+    @Title { Introduction }
+@Begin
+@LP
+Dol Pi is a constructed language. It was made from scratch, and is still growing.
+Words are generally short in Dol Pi, and its grammar is simple. The grammar is also
+loosely structured and heavily dependant of context.
+@PP
+This guide exists to help you understand Dol Pi, and to teach you how to speak and
+write in it.
+@End @Chapter
+@Chapter
+    @Title { Speaking Dol Pi }
+@Begin
+@LP
+There are no strict rules on how to pronounce words in Dol Pi, but to make sure
+everyone understands each other, there is a guideline:
+@LP @I{a} As in @B{a}dd.
+@LP @I{b} As in @B{b}ed.
+@LP @I{d} @B{d}ie.
+@LP @I{e} @B{e}lse.
+@LP @I{f} @B{f}ind.
+@LP @I{g} @B{g}ood.
+@LP @I{h} @B{h}old.
+@LP @I{i} @B{ea}t.
+@LP @I{j} @B{j}ungle.
+@LP @I{k} @B{c}old.
+@LP @I{l} @B{l}ike.
+@LP @I{m} @B{m}ind.
+@LP @I{n} @B{n}ose.
+@LP @I{o} @B{o}ld.
+@LP @I{p} @B{p}ie.
+@LP @I{r} @B{r}ain.
+@LP @I{s} @B{s}ide.
+@LP @I{t} @B{t}ree.
+@LP @I{u} g{@B oo}d.
+@LP @I{v} @B{v}ile.
+@LP @I{w} @B{w}ar.
+@LP @I{z} @B{z}en.
+@PP
+You might have noticed some letters are missing (c, q, x and y). That is because I felt they did not add
+anything substantial to the alphabet.
+@PP
+Dol Pi does not have any fancy pronunciation rules, unlike many natural languages.
+@End @Chapter
+@Chapter
+    @Title { Understanding Dol Pi }
+@Begin
+@LP
+Every sentence and group of words revolves around a central idea: a head followed by a tail. For example:
+@PP
+{ Helvetica Base } @Font { Pera amp zo }
+@PP
+Or, literally translated to English:
+@PP
+{ Helvetica Base } @Font { Man old very }
+@End @Chapter
+@End @Book
