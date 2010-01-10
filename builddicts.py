@@ -47,9 +47,12 @@ result = []
 for line in src.split('\n'):
 	if line:
 		translations = line.split(';')
-		for origin in translations[posfrom].split(','):
+		for origin in translations[posfrom].replace(r'\,', '\x01').split(','):
 			if origin and origin != '...':
-				result.append((origin, translations[posto]))
+				result.append((origin.replace('\x01', ','),
+				              [trans.replace('\x01', ',') for trans in
+				              translations[posto].replace(r'\,', '\x01')
+				              .split(',')]))
 
 result.sort()
 
@@ -57,7 +60,7 @@ result.sort()
 i = 0
 while i < len(result)-1:
 	if result[i][0] == result[i+1][0]:
-		result[i] = (result[i][0], result[i][1]+','+result.pop(i+1)[1])
+		result[i] = (result[i][0], result[i][1] + result.pop(i+1)[1])
 	else:
 		i += 1
 
@@ -70,7 +73,7 @@ try:
 	if destformat == 'txt':
 		f.write(LANGNAMES[langfrom].upper() + '-' + LANGNAMES[langto].upper() + '\n\n')
 		for line in result:
-			translations = line[1].split(',')
+			translations = line[1]
 			if len(translations) == 0: continue
 			if len(translations) > 1:
 				f.write(line[0]+': 1 '+translations[0]+'\n')
@@ -88,7 +91,7 @@ try:
 			f.write('\t\t<h2><a name="'+letter.lower()+'">'+letter.upper()+'</a></h2>\n\t\t\t<dl>\n')
 		lastletter = ''
 		for line in result:
-			translations = line[1].split(',')
+			translations = line[1]
 			if len(translations) == 0: continue
 			if line[0][0] != lastletter:
 				if lastletter:
@@ -121,7 +124,7 @@ try:
 			return text
 		lastletter = ''
 		for line in result:
-			translations = line[1].split(',')
+			translations = line[1]
 			if len(translations) == 0: continue
 			if line[0][0] != lastletter:
 				if lastletter:
@@ -143,7 +146,7 @@ try:
 			f.write('\\section{'+letter.upper()+'}\n')
 		lastletter = ''
 		for line in result:
-			translations = line[1].split(',')
+			translations = line[1]
 			if len(translations) == 0: continue
 			if line[0][0] != lastletter:
 				lastletter = line[0][0]
