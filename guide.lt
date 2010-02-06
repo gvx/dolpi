@@ -1,4 +1,5 @@
 @Include { bookdict }
+def @DolPi right x { { Helvetica Bold 8p } @Font x }
 @Book
     @Title { Dol Pi Grammatical guide }
     @Author { Robin Wellner }
@@ -49,7 +50,7 @@ everyone understands each other, there is a guideline:
 You might have noticed some letters are missing (c, q, x and y). That is because I felt they did not add
 anything substantial to the alphabet.
 @PP
-Dol Pi does not have any fancy pronunciation rules, unlike many natural languages.
+Dol Pi does not have any context-sensitive pronunciation rules, unlike many natural languages.
 @End @Chapter
 @Chapter
     @Title { Understanding Dol Pi }
@@ -57,12 +58,18 @@ Dol Pi does not have any fancy pronunciation rules, unlike many natural language
 @LP
 Every sentence and group of words revolves around a central idea: a head followed by a tail. For example:
 @PP
-{ Helvetica Base } @Font { Pera amp zo }
+@DolPi { Pera amp zo }
 @PP
 Or, literally translated to English:
 @PP
-{ Helvetica Base } @Font { Man old very }
+@DolPi { Man old very }
 @PP
-Each next word changes something about the meaning of the head.
+Each next word changes something about the meaning of the head: @DolPi @Font { old } changes the
+meaning of @DolPi { Man }, and @DolPi @Font { very } changes the meaning of
+@DolPi @Font { old }.
+@PP
+Every new part of a sentence can be introduced by a special word:
+@PP
+@DolPi { Ada po ji ka mel }
 @End @Chapter
 @End @Book
