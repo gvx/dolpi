@@ -1,5 +1,6 @@
 @Include { bookdict }
 def @DolPi right x { { Helvetica Bold 8p } @Font x }
+def @Quote right x {{@Char quotedblleft}x{@Char quotedblright}}
 @Book
     @Title { Dol Pi Grammatical guide }
     @Author { Robin Wellner }
@@ -8,22 +9,41 @@ def @DolPi right x { { Helvetica Bold 8p } @Font x }
 //
 @Begin
 @Chapter
+    @Title { Guide to the guide }
+@Begin
+@LP
+A little bit of explanation: When text is typeset @DolPi {like this}, it means
+it is Dol Pi. When text is @Quote {quoted}, it is a translation of a certain
+Dol Pi text fragment.
+@Section
+   @Title { Terminology }
+@Begin
+@LP
+Dol Pi is based on @I primitives is similar to a words in most languages,
+especially in appearance. However, a primitive usually has slightly meaning than
+a regular word. Primitives are grouped into @I { sentence fragments }, or
+@I fragments in short. Fragments are somewhere between words and phrases (or
+sometimes even clauses). One level higher, Dol Pi has sentences, which are the
+same as sentences in languages as English.
+@End @Section
+@End @Chapter
+@Chapter
     @Title { Introduction }
 @Begin
 @LP
-Dol Pi is a constructed language. It was made from scratch, and is still growing.
-Words are generally short in Dol Pi, and its grammar is simple. The grammar is also
-loosely structured and heavily dependant of context.
+Dol Pi is a constructed language. It was made from scratch, and is still
+growing. Words are generally short in Dol Pi, and its grammar is simple. The
+grammar is also loosely structured and heavily dependant of context.
 @PP
-This guide exists to help you understand Dol Pi, and to teach you how to speak and
-write in it.
+This guide exists to help you understand Dol Pi, and to teach you how to speak
+and write in it.
 @End @Chapter
 @Chapter
     @Title { Speaking Dol Pi }
 @Begin
 @LP
-There are no strict rules on how to pronounce words in Dol Pi, but to make sure
-everyone understands each other, there is a guideline:
+There are no strict rules on how to pronounce words in Dol Pi, but to make
+sure everyone understands each other, there is a guideline:
 @LP @I{a} As in @B{a}dd.
 @LP @I{b} As in @B{b}ed.
 @LP @I{d} @B{d}ie.
@@ -55,21 +75,51 @@ Dol Pi does not have any context-sensitive pronunciation rules, unlike many natu
 @Chapter
     @Title { Understanding Dol Pi }
 @Begin
+
 @LP
-Every sentence and group of words revolves around a central idea: a head followed by a tail. For example:
+Every sentence and group of words revolves around a central idea: a head
+followed by a tail. For example:
 @PP
 @DolPi { Pera amp zo }
 @PP
 Or, literally translated to English:
 @PP
-@DolPi { Man old very }
+@Quote { Man old very }
 @PP
-Each next word changes something about the meaning of the head: @DolPi @Font { old } changes the
-meaning of @DolPi { Man }, and @DolPi @Font { very } changes the meaning of
-@DolPi @Font { old }.
+Each next word changes something about the meaning of the head:
+@Quote { old } changes the meaning of @Quote { Man }, and
+@Quote { very } changes the meaning of @Quote @Font { old }.
+@PP
+A special case of that is @DolPi { ta }, @Quote { not } or @Quote { no }. When
+it follows another primitive, it negates that word:
+@PP @DolPi { zeng } @Quote { friend }
+@PP @DolPi { zeng ta } @Quote { enemy }
+@PP @DolPi { zeng wo } @Quote { close friend }
+@PP @DolPi { zeng wo ta } @Quote { shallow friend }
+@PP @DolPi { zeng ta wo } @Quote { archenemy }
 @PP
 Every new part of a sentence can be introduced by a special word:
 @PP
 @DolPi { Ada po ji ka mel }
+@PP
+Here, @DolPi { po } indicates the subject follows: @DolPi { ji }, or
+@Quote { I }. @DolPi { ka } does the same thing for the object of the
+sentence: @DolPi { mel } means @Quote { you }.
+@PP
+Since @DolPi { Ada } means @Quote { love } or  @Quote { to love }, we can
+deduce the example sentence means @Quote { I love you. } A sentence like
+@DolPi { Ada po mel ka ji } means @Quote { You love me. }
+@Section
+    @Title {A word on capitalization}
+@Begin
+@LP
+In this guide, Dol Pi sentences are capitalized, while fragments and single
+words usually are not. The only exception being fragments from a sentence
+mentioned earlier, which have the same words capitalized as the full sentence.
+@PP
+Dol Pi does not enforce any such rules. In the default dictionaries, every
+primitive is capitalized. One can also capitalize every word or fragment. One
+thing is recommended: be consistent and stick with your choice.
+@End @Section
 @End @Chapter
 @End @Book
