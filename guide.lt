@@ -109,8 +109,9 @@ sentence: @DolPi { mel } means @Quote { you }.
 Since @DolPi { Ada } means @Quote { love } or  @Quote { to love }, we can
 deduce the example sentence means @Quote { I love you. } A sentence like
 @DolPi { Ada po mel ka ji } means @Quote { You love me. }
+@BeginSections
 @Section
-    @Title {A word on capitalization}
+    @Title { A word on capitalization }
 @Begin
 @LP
 In this guide, Dol Pi sentences are capitalized, while fragments and single
@@ -122,16 +123,17 @@ primitive is capitalized. One can also capitalize every word or fragment. One
 thing is recommended: be consistent and stick with your choice.
 @End @Section
 @Section
-    @Title {A word on ambiguity}
+    @Title { A word on ambiguity }
 @Begin
 @LP
-@DolPi { Or mid mel? } means @Quote { Do you want water/a drink? }. The meaning
+@DolPi { Or mid mel? } means @Quote { Do you want "water/a drink?" }. The meaning
 of @DolPi { mel } can be inferred from context. Consider a possible answer to
 that question: @DolPi { Mid ta. } It could mean @Quote { I don't drink. } or
 @Quote { I'm thirsty. }
 @PP
-Ambiguous constructs can be useful in---for example---poetry, but try to avoid
-them in every-day use.
+Ambiguous constructs can be useful in---for example---poetry, but they are best
+avoided in every-day use.
 @End @Section
+@EndSections
 @End @Chapter
 @End @Book
