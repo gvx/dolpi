@@ -126,14 +126,32 @@ thing is recommended: be consistent and stick with your choice.
     @Title { A word on ambiguity }
 @Begin
 @LP
-@DolPi { Or mid mel? } means @Quote { Do you want "water/a drink?" }. The meaning
-of @DolPi { mel } can be inferred from context. Consider a possible answer to
-that question: @DolPi { Mid ta. } It could mean @Quote { I don't drink. } or
-@Quote { I'm thirsty. }
+@DolPi { Or mid mel? } means @Quote { Do you want "water/a drink?" }. The
+meaning of @DolPi { mel } can be inferred from context. Consider a possible
+answer to that question: @DolPi { Mid ta. } It could mean @Quote { I don't
+drink. } or @Quote { I'm thirsty. }
 @PP
 Ambiguous constructs can be useful in---for example---poetry, but they are best
 avoided in every-day use.
 @End @Section
 @EndSections
+@End @Chapter
+@Chapter
+    @Title { Counting }
+@Begin
+@LP In Dol Pi, numbers are simple to learn:
+@PP @DolPi ja means @Quote {one}, @DolPi mar means @Quote {two}, @DolPi aki
+means @Quote {three}, @DolPi isa means @Quote{four} and @DolPi pena means
+@Quote {five}.
+@PP @Quote 6-10 are @DolPi{jipa}, @DolPi{mara}, @DolPi{isaka} and @DolPi
+{penama}. (Don't they look familiar?)
+@PP @Quote 11-14 look slightly different: @DolPi{demani}, @DolPi{zomf},
+@DolPi{kari} and @DolPi{kof}.
+@PP @Quote 15-19 are new too: @DolPi{tomi}, @DolPi{tof}, @DolPi{mohi},
+@DolPi{morf} and @DolPi{penumi}.
+@PP After that, everything gets much simpler: @DolPi {mar su} means
+@Quote{twenty}, @DolPi {mar su ja} means @Quote{twenty one}, @DolPi {mar su mar}
+means @Quote{twenty two}, @DolPi{aki su} means @Quote{thirty}, @DolPi{ja su su}
+means @Quote{one hundred}, @DolPi{ja su ja su} means @Quote{110}...
 @End @Chapter
 @End @Book
