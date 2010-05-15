@@ -1,3 +1,4 @@
+@SysInclude { tbl }
 @Include { bookdict }
 def @DolPi right x { { Helvetica Bold 8p } @Font x }
 def @Quote right x {{@Char quotedblleft}x{@Char quotedblright}}
@@ -153,5 +154,32 @@ means @Quote {three}, @DolPi isa means @Quote{four} and @DolPi pena means
 @Quote{twenty}, @DolPi {mar su ja} means @Quote{twenty one}, @DolPi {mar su mar}
 means @Quote{twenty two}, @DolPi{aki su} means @Quote{thirty}, @DolPi{ja su su}
 means @Quote{one hundred}, @DolPi{ja su ja su} means @Quote{110}...
+@PP You can read a table of every number from 1 to 60 on the next page.
+@CentredDisplay @Tbl
+    #aformat { @Cell @I A | @Cell @I B | @Cell @I C | @Cell @I D }
+    bformat { @Cell A | @Cell @DolPi B | @Cell C | @Cell @DolPi D | @Cell E | @Cell @DolPi F }
+{
+    #@Rowa A {"#"} B {Dol Pi} C {"#"} D {DolPi}
+    @Rowb A {1} B {ja} C {21} D {mar su ja} E {41} F {isa su ja}
+    @Rowb A {2} B {mar} C {22} D {mar su mar} E {42} F {isa su mar}
+    @Rowb A {3} B {aki} C {23} D {mar su aki} E {43} F {isa su aki}
+    @Rowb A {4} B {isa} C {24} D {mar su isa} E {44} F {isa su isa}
+    @Rowb A {5} B {pena} C {25} D {mar su pena} E {45} F {isa su pena}
+    @Rowb A {6} B {jipa} C {26} D {mar su jipa} E {46} F {isa su jipa}
+    @Rowb A {7} B {mara} C {27} D {mar su mara} E {47} F {isa su mara}
+    @Rowb A {8} B {isaka} C {28} D {mar su isaka} E {48} F {isa su isaka}
+    @Rowb A {9} B {penama} C {29} D {mar su penama} E {49} F {isa su penama}
+    @Rowb A {10} B {jeka} C {30} D {aki su} E {50} F {pena su}
+    @Rowb A {11} B {demani} C {31} D {aki su ja} E {51} F {pena su ja}
+    @Rowb A {12} B {zomf} C {32} D {aki su mar} E {52} F {pena su mar}
+    @Rowb A {13} B {kari} C {33} D {aki su aki} E {53} F {pena su aki}
+    @Rowb A {14} B {kof} C {34} D {aki su isa} E {54} F {pena su isa}
+    @Rowb A {15} B {tomi} C {35} D {aki su pena} E {55} F {pena su pena}
+    @Rowb A {16} B {tof} C {36} D {aki su jipa} E {56} F {pena su jipa}
+    @Rowb A {17} B {moFi} C {37} D {aki su mara} E {57} F {pena su mara}
+    @Rowb A {18} B {morf} C {38} D {aki su isaka} E {58} F {pena su isaka}
+    @Rowb A {19} B {penumi} C {39} D {aki su penama} E {59} F {pena su penumi}
+    @Rowb A {20} B {mar su} C {40} D {isa su} E {60} F {jipa su}
+}
 @End @Chapter
 @End @Book
