@@ -183,5 +183,10 @@ means @Quote{one hundred}, @DolPi{ja su ja su} means @Quote{110}...
 }
 @PP Numbers are placed after the fragment they belong to, such that @Quote{two
 men} is @DolPi{pera mar} in Dol Pi.
+@PP As of writing, Dol Pi contains mostly cardinal numbers. The only ordinal
+number is currently @DolPi{jalas}: @Quote{first}. Fractions are possible by
+preceding the denominator by @DolPi{kong} (@Quote{part}). Thus @DolPi{kong mar}
+means @Quote{half} or @Quote{one half}. The numerator prededes @DolPi{kong}:
+@DolPi{isa kong pena} means @Quote{four-fifths}.
 @End @Chapter
 @End @Book
