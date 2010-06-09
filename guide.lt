@@ -181,5 +181,7 @@ means @Quote{one hundred}, @DolPi{ja su ja su} means @Quote{110}...
     @Rowb A {19} B {penumi} C {39} D {aki su penama} E {59} F {pena su penumi}
     @Rowb A {20} B {mar su} C {40} D {isa su} E {60} F {jipa su}
 }
+@PP Numbers are placed after the fragment they belong to, such that @Quote{two
+men} is @DolPi{pera mar} in Dol Pi.
 @End @Chapter
 @End @Book
