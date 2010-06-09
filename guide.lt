@@ -34,7 +34,7 @@ same as sentences in languages as English.
 @LP
 Dol Pi is a constructed language. It was made from scratch, and is still
 growing. Words are generally short in Dol Pi, and its grammar is simple. The
-grammar is also loosely structured and heavily dependant of context.
+grammar is also loosely structured and heavily dependent of context.
 @PP
 This guide exists to help you understand Dol Pi, and to teach you how to speak
 and write in it.
@@ -186,7 +186,7 @@ men} is @DolPi{pera mar} in Dol Pi.
 @PP As of writing, Dol Pi contains mostly cardinal numbers. The only ordinal
 number is currently @DolPi{jalas}: @Quote{first}. Fractions are possible by
 preceding the denominator by @DolPi{kong} (@Quote{part}). Thus @DolPi{kong mar}
-means @Quote{half} or @Quote{one half}. The numerator prededes @DolPi{kong}:
+means @Quote{half} or @Quote{one half}. The numerator precedes @DolPi{kong}:
 @DolPi{isa kong pena} means @Quote{four-fifths}.
 @End @Chapter
 @End @Book
