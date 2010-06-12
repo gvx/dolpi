@@ -189,4 +189,15 @@ preceding the denominator by @DolPi{kong} (@Quote{part}). Thus @DolPi{kong mar}
 means @Quote{half} or @Quote{one half}. The numerator precedes @DolPi{kong}:
 @DolPi{isa kong pena} means @Quote{four-fifths}.
 @End @Chapter
+@Chapter
+    @Title { Context }
+@Begin
+@LP It has been said before: the meanings of primitives, fragments and
+sentences in Dol Pi is heavily dependent on context. Take @DolPi{er}: it can
+mean both @Quote{place} and @Quote{to live (somewhere)}.
+@PP Another example is the possibility to leave out fragments where the speaker
+or writer deems it appropriate. Often the subject of a sentence can be left out
+if it is @DolPi{ji} (@Quote{I}) or the same as the subject of the previous
+sentence.
+@End @Chapter
 @End @Book
