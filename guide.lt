@@ -97,7 +97,7 @@ it follows another primitive, it negates that word:
 @PP @DolPi { zeng ta } @Quote { enemy }
 @PP @DolPi { zeng wo } @Quote { close friend }
 @PP @DolPi { zeng wo ta } @Quote { shallow friend }
-@PP @DolPi { zeng ta wo } @Quote { archenemy }
+@PP @DolPi { zeng ta wo } @Quote { arch-enemy }
 @PP
 Every new part of a sentence can be introduced by a special word:
 @PP
@@ -205,5 +205,16 @@ sentence.
 @PP The imperative is often achieved by leaving out the subject: @DolPi{sas}
 can be translated as @Quote{song}, @Quote{to sing}, @Quote{sing!} or
 @Quote{singing}, depending on context.
+@End @Chapter
+@Chapter
+	@Title { Associativity }
+@Begin
+@LP Words and sentence fragments in Dol Pi are left-associative; rendered
+symbolically: @DolPi{a b c} would mean the same as @DolPi{(a b) c}. As seen
+before, @DolPi{zeng ta wo} is the same as @DolPi{(zeng ta) wo}: @Quote{(friend
+not) deep} = @Quote{enemy deep} = @Quote{arch-enemy}.
+@PP Sentences work differently: each sentence fragment has an independent
+meaning, order is not important; although traditionally any verbs are placed up
+front.
 @End @Chapter
 @End @Book
