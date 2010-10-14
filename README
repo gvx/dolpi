@@ -16,6 +16,6 @@ those who can't (or don't want to) run Python scripts: on GitHub are all the
 dictionaries for all languages in all formats available for every major release
 of the language.
 
-A grammatical guide is not included in this README. If (or when) I will write
-one, it will be put in this repo in latex format, and a PDF version will be put
-up on GitHub for every major release.
+A grammatical guide is not included in this README. The guide is written in
+Lout and can be found in guide.lt. A PDF version is distributed with every
+major release.
