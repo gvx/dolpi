@@ -1,4 +1,5 @@
 @SysInclude { tbl }
+@SysInclude { math }
 @Include { bookdict }
 def @DolPi right x { { Helvetica Bold 8p } @Font x }
 def @Quote right x {{@Char quotedblleft}x{@Char quotedblright}}
@@ -68,10 +69,14 @@ sure everyone understands each other, there is a guideline:
 @LP @I{w} @B{w}ar.
 @LP @I{z} @B{z}en.
 @PP
-You might have noticed some letters are missing (c, q, x and y). That is because I felt they did not add
-anything substantial to the alphabet.
+You might have noticed some letters are missing (c, q, x and y). That is because
+I felt they did not add anything substantial to the alphabet.
 @PP
-Dol Pi does not have any context-sensitive pronunciation rules, unlike many natural languages.
+Dol Pi does not have any context-sensitive pronunciation rules, unlike many
+natural languages.
+@PP
+Note that there might be some differences in pronunciation by speakers from
+different parts of the world. Unfortunately, this is unavoidable.
 @End @Chapter
 @Chapter
     @Title { Understanding Dol Pi }
@@ -184,13 +189,15 @@ means @Quote{one hundred}, @DolPi{ja su ja su} means @Quote{110}...
 @PP Numbers are placed after the fragment they belong to, such that @Quote{two
 men} is @DolPi{pera mar} in Dol Pi.
 @PP Ordinal numbers in Dol Pi are made by removing any ending consonants of the
-last fragment of the corresponding cardinal number: @DolPi{jalas} means
-@Quote{first}, @DolPi{malas} is @Quote{second}, @DolPi{mar sulas} means
-@Quote{twentieth}, and so on.
+last fragment of the corresponding cardinal number and appending @DolPi{-as}:
+@DolPi{jalas} means @Quote{first}, @DolPi{malas} is @Quote{second},
+@DolPi{mar sulas} means @Quote{twentieth}, and so on.
 @PP Fractions are possible by preceding the denominator by @DolPi{kong}
 (@Quote{part}). Thus @DolPi{kong mar} means @Quote{half} or
 @Quote{one half}. The numerator precedes @DolPi{kong}:
 @DolPi{isa kong pena} means @Quote{four-fifths}.
+@PP @Quote{@M {2 3 frac 5}} is rendered as @DolPi{mar to aki kong pena}.
+(@DolPi{to} means @Quote{and}, more on that later.)
 @End @Chapter
 @Chapter
     @Title { Context }
@@ -215,6 +222,11 @@ before, @DolPi{zeng ta wo} is the same as @DolPi{(zeng ta) wo}: @Quote{(friend
 not) deep} = @Quote{enemy deep} = @Quote{arch-enemy}.
 @PP Sentences work differently: each sentence fragment has an independent
 meaning, order is not important; although traditionally any verbs are placed up
-front.
+front. That is because there are no signal words for verbs.
+@End @Chapter
+@Chapter
+	@Title { Signal words }
+@Begin
+@LP Signal words signify something.
 @End @Chapter
 @End @Book
