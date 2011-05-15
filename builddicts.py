@@ -90,6 +90,16 @@ try:
 		def startletter(letter):
 			f.write('\t\t<h2><a name="'+letter.lower()+'">'+letter.upper()+'</a></h2>\n\t\t\t<dl>\n')
 		lastletter = ''
+		def getname(text):
+			if langfrom == 'dp':
+				if ' ' in text:
+					line = text.split()
+					first = line.pop(0)
+					return '<dt>' + first + ' ' + ' '.join('<a href="#' + t.lower() + '">' + t + '</a>' for t in line)
+				else:
+					return '<dt id="' + text.lower() + '">' + text
+			else:
+				return '<dt>' + text
 		for line in result:
 			translations = line[1]
 			if len(translations) == 0: continue
@@ -98,7 +108,7 @@ try:
 					f.write('\t\t\t</dl>\n')
 				lastletter = line[0][0]
 				startletter(lastletter)
-			f.write('\t\t\t\t<dt>'+line[0]+'</dt>\n')
+			f.write('\t\t\t\t'+getname(line[0])+'</dt>\n')
 			for translation in translations:
 				f.write('\t\t\t\t\t<dd>'+translation+'</dd>\n')
 		f.write('\n\t\t\t</dl>\n\t</body>\n</html>')
