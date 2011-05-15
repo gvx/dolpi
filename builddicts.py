@@ -2,13 +2,13 @@
 import sys
 import string
 
-LANGS     = ('en-dp', 'nl-dp', 'no-dp', 'dp-en', 'dp-nl', 'dp-no')
+LANGS     = ('en-dp', 'nl-dp', 'dp-en', 'dp-nl')
 FORMATS   = ('txt', 'html', 'latex', 'lout')
-LANGPOS   = {'dp': 0, 'nl': 1, 'en': 2, 'no': 3}
-LANGNAMES = {'dp': 'Dol Pi', 'nl': 'Nederlands', 'en': 'English', 'no': 'Norsk'}
+LANGPOS   = {'dp': 0, 'nl': 1, 'en': 2}
+LANGNAMES = {'dp': 'Dol Pi', 'nl': 'Nederlands', 'en': 'English'}
 EXT       = {'latex': 'tex', 'lout': 'lt'}
-USELANGS  = {'en-dp': 'English', 'nl-dp': 'Dutch', 'no-dp': 'Norwegian',
-				'dp-en': 'English', 'dp-nl': 'Dutch', 'dp-no': 'Norwegian'}
+USELANGS  = {'en-dp': 'English', 'nl-dp': 'Dutch',
+				'dp-en': 'English', 'dp-nl': 'Dutch'}
 
 if len(sys.argv) == 2 and sys.argv[1] == '--help':
 	print('usage: python builddicts.py LANG FORMAT')

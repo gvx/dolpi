@@ -7,10 +7,10 @@ more about emotions and feelings.
 
 The git repo includes a source file (src.ecsv), which is written in an extended
 comma separated value list. The definitions for the translations in each
-language (Dol Pi, Dutch, English and Norwegian) are separated by semi-colons
+language (Dol Pi, Dutch and English) are separated by semi-colons
 (;) and the different translations for one language are separated by commas.
 
-The source file can be "compiled" to six different dictionaries in a number of
+The source file can be "compiled" to four different dictionaries in a number of
 formats. For this purpose, builddicts.py is included in the distribution. For
 those who can't (or don't want to) run Python scripts: on GitHub are all the
 dictionaries for all languages in all formats available for every major release
