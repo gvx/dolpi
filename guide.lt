@@ -189,7 +189,7 @@ means @Quote{one hundred}, @DolPi{ja su ja su} means @Quote{110}...
 @PP Numbers are placed after the fragment they belong to, such that @Quote{two
 men} is @DolPi{pera mar} in Dol Pi.
 @PP Ordinal numbers in Dol Pi are made by removing any ending consonants of the
-last fragment of the corresponding cardinal number and appending @DolPi{-as}:
+last fragment of the corresponding cardinal number and appending @DolPi{-las}:
 @DolPi{jalas} means @Quote{first}, @DolPi{malas} is @Quote{second},
 @DolPi{mar sulas} means @Quote{twentieth}, and so on.
 @PP Fractions are possible by preceding the denominator by @DolPi{kong}
@@ -207,9 +207,9 @@ sentences in Dol Pi is heavily dependent on context. Take @DolPi{er}: it can
 mean both @Quote{place} and @Quote{to live (somewhere)}.
 @PP Another example is the possibility to leave out fragments where the speaker
 or writer deems it appropriate. Often the subject of a sentence can be left out
-if it is @DolPi{ji} (@Quote{I}) or the same as the subject of the previous
+if it is @DolPi ji (@Quote{I}) or the same as the subject of the previous
 sentence.
-@PP The imperative is often achieved by leaving out the subject: @DolPi{sas}
+@PP The imperative is often achieved by leaving out the subject: @DolPi sas
 can be translated as @Quote{song}, @Quote{to sing}, @Quote{sing!} or
 @Quote{singing}, depending on context.
 @End @Chapter
@@ -222,11 +222,38 @@ before, @DolPi{zeng ta wo} is the same as @DolPi{(zeng ta) wo}: @Quote{(friend
 not) deep} = @Quote{enemy deep} = @Quote{arch-enemy}.
 @PP Sentences work differently: each sentence fragment has an independent
 meaning, order is not important; although traditionally any verbs are placed up
-front. That is because there are no signal words for verbs.
+front. That is because there are no signal words for verbs. More on signal words
+in the next section.
 @End @Chapter
 @Chapter
 	@Title { Signal words }
 @Begin
 @LP Signal words signify something.
+@PP We've seen a few of them already: @DolPi po signals the start of the
+subject sentence fragment, @DolPi ka does the same for the object sentence
+fragment.
+@PP @DolPi to is a more familiar signal word, meaning @Quote{and}. There are
+actually four families of three related words each, for different truth values
+and levels.
+@PP @DolPi to is for the second level, connecting words. The first level word
+for @Quote and  is @DolPi{o}, which connects two fragments, and the third level
+signal word is @DolPi{ton}. The @DolPi to family is like the boolean operator
+@S and --- it states that both sides are true.
+@PP @DolPi ti is similar, meaning @S{or}. It has the same levels as @DolPi{to},
+so you'll be using @DolPi{i}, @DolPi ti or @DolPi tin for the word @Quote{or},
+depending on the context.
+@PP The English word @Quote or is rather ambiguous, especially whether or not
+it is meant to be inclusive or exclusive. Dol Pi doesn't have the same problem,
+as it provides @DolPi te (and its relatives) to use @S{xor}.
+@PP The fourth and last (for now) of these word family is @DolPi{tu}, for
+@Quote{neither ... nor} --- similar to @S{nor}.
+@PP @DolPi{fanko amp o grat} means @Quote{old and large hammer}.
+@PP @DolPi{fanko amp i grat} means @Quote{old "and/or" large hammer}.
+@PP @DolPi{fanko amp e grat} means @Quote{either old or large hammer}.
+@PP @DolPi{fanko amp u grat} means @Quote{neither old nor large hammer}.
+@PP @DolPi{arsi po ji ka fanko @BI to kijo} means @Quote{I grabbed the hammer
+and @B decoration}.
+@PP @DolPi{arsi po ji ka fanko @BI ton kijo} means @Quote{I grabbed the hammer
+and @B{started decorating}}.
 @End @Chapter
 @End @Book
