@@ -109,7 +109,8 @@ try:
 			f.write('@Chapter\n    @Title { '+escape(letter.upper())+' }\n@Begin\n')
 		def endletter(letter):
 			f.write('@End @Chapter\n')
-		reps = (('~', '"~"'),
+		reps = (('"', '{@Char quotedbl}'),
+				('~', '"~"'),
 				('/', '"/"'),
 				(u'é', '{@Char eacute}'),
 				(u'É', '{@Char Eacute}'),
